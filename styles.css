@@ -1,0 +1,125 @@
+/* ESTILOS DE LA PANTALLA QUIENES SOMOS  */
+
+
+/* ESTILOS DE LAS DEMAS SECCIONES  */
+.seccion-segunda{
+    height: 400px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pantalla-completa{
+    width: 100%;
+}
+
+.titulo-seccion{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+
+/* ---------- DISEÑOS GLOBALES------------   */
+/*Centra contenido UNICO*/
+.centrar-contenido-unico{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Centra todo el contenido  */
+.centrar-contenido-todo{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Pantalla dividida por la mitad
+   ocupa el 50% de altura
+*/
+.dividir-contenido{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 50%;
+}
+
+
+
+
+/* COLORES  */
+.fondo-blanco {
+    background-color: white;
+}
+
+.fondo-azul{
+    background-color: blue;
+}
+
+.color-negro {
+    color:black;
+}
+
+
+/* TAMAÑOS */
+/* Tamaño pequeño < 576px */
+@media (max-width: 576px) {
+    .seccion-primera{
+        height: 700px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .pantalla-uncuarto{
+        width: 100%;
+        background-color: black;
+        height: 100%;
+    }
+    .pantalla-mitad{
+        width: 100%;
+        height: 50%;
+    }
+  }
+
+/* Tamaño mediano entre 577px y 991px */
+@media (min-width: 577px) and (max-width: 991px) {
+    .seccion-primera{
+        height: 700px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .pantalla-uncuarto{
+        width: 50%;
+        background-color: black;
+        height: 100%;
+    }
+    .pantalla-mitad{
+        width: 100%;
+        height: 50%;
+    }
+  }
+
+/* Tamaño grande mayor a > 992px */
+@media (min-width: 992px) {
+    .pantalla-uncuarto{
+        width: 25%;
+        background-color: black;
+        height: 100%;
+    }
+    .pantalla-mitad{
+        width: 50%;
+        height: 100%;
+    }
+    .seccion-primera{
+        height: 350px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+  }
