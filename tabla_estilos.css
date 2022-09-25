@@ -118,6 +118,50 @@ table, td, th {
 }
 
 
+.seccion-busqueda{
+  width: 100%;
+  background-color: #092147;
+  color: #f5cf27;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filtrado{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.barra-busqueda{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+
+.boton-buscar {
+  padding: 10px 20px 10px 20px;
+  background-color: #f5cf27;
+  color: #092147;
+  margin-left: 5px;
+  margin-right: 20px;
+  border-radius: 90px;
+  border: 1px solid #fff;
+}
+
+.input-buscar-texto{
+  padding: 8px 10px;
+}
+
+.label-buscar{
+  margin-right: 1em;
+}
  /* -- Media queries para las secciones segun el tamaño -- */
 
 
