@@ -9,12 +9,29 @@
 </head>
 <body>
 
-    <!-- Seccion de quienes somos -->
-    <div class="seccion-primera">
-        <div class="pantalla-mitad centrar-contenido-unico"> 
-            <img src="/Utils/Imagenes/osito-prueba2.jpg" alt="imagen">
+    <!--Barra de navegacion-->
+    <nav class="pantalla-completa">
+        <div class="pantalla-mitad centrar-contenido-unico fondo-blanco borde-derecho-amarillo borde-inferior-azul">
+            <img src="/Utils/Imagenes/mini_logo.jpeg" alt="logo">
         </div>
-        <div class="pantalla-mitad centrar-contenido-todo fondo-azul">
+        
+        <div class="pantalla-mitad centrar-contenido-navbar"> 
+            <a href="#">Inicio</a>
+            <a href="#">Servicios</a>
+            <a href="#">Tecnologias</a>
+            <a href="#">Contacto</a>
+            <a href="#"> Login </a>
+        </div>
+
+    </nav>
+
+    <!-- Seccion de quienes somos -->
+
+    <div class="seccion-primera borde-superior-azul">
+        <div class="pantalla-mitad centrar-contenido-unico"> 
+            <img src="/Utils/Imagenes/mini_logo.jpeg" alt="imagen">
+        </div>
+        <div class="pantalla-mitad centrar-contenido-todo">
             <h1> ¿Quienes somos ? </h1>
             <p> Empresa de consultoria y servicios en 
                 tecnologias
@@ -23,47 +40,103 @@
     </div>
 
 
+
+    <div class="titulo-seccion">
+        <h1> Servicios </h1>
+    </div>
+
+    <!-- Seccion de servicios -->
+
     <div class="seccion-segunda"> 
-        <div class="titulo-seccion">
-            <h1> Servicios </h1>
-        </div>
-
         <div class="pantalla-uncuarto">
-           <div class="dividir-contenido centrar-contenido-unico fondo-blanco">
+           <div class="dividir-contenido centrar-contenido-unico">
                 <h1> Aqui va la imagen </h1>
            </div>
-           <div class="dividir-contenido centrar-contenido-unico fondo-azul">
+           <div class="dividir-contenido centrar-contenido-unico">
                 <h1> Aqui va el texto </h1>
            </div>
         </div>
 
         <div class="pantalla-uncuarto"> 
-            <div class="dividir-contenido centrar-contenido-unico fondo-blanco">
+            <div class="dividir-contenido centrar-contenido-unico">
                 <h1> Aqui va la imagen </h1>
            </div>
-           <div class="dividir-contenido centrar-contenido-unico fondo-azul">
+           <div class="dividir-contenido centrar-contenido-unico">
                 <h1> Aqui va el texto </h1>
            </div>
         </div>
 
         <div class="pantalla-uncuarto"> 
-            <div class="dividir-contenido centrar-contenido-unico fondo-blanco">
+            <div class="dividir-contenido centrar-contenido-unico">
                 <h1> Aqui va la imagen </h1>
            </div>
-           <div class="dividir-contenido centrar-contenido-unico fondo-azul">
+           <div class="dividir-contenido centrar-contenido-unico">
                 <h1> Aqui va el texto </h1>
            </div>
         </div>
 
         <div class="pantalla-uncuarto"> 
-            <div class="dividir-contenido centrar-contenido-unico fondo-blanco">
+            <div class="dividir-contenido centrar-contenido-unico">
                 <h1> Aqui va la imagen </h1>
            </div>
-           <div class="dividir-contenido centrar-contenido-unico fondo-azul">
+           <div class="dividir-contenido centrar-contenido-unico">
                 <h1> Aqui va el texto </h1>
            </div>
         </div>
 
     </div>
+
+
+    <!--Seccion de contacto-->
+    <div class="titulo-seccion">
+        <h1> Contacto </h1>
+    </div>
+    <form action="/my-handling-form-page" method="post">
+        <ul>
+            <li>
+                <label for="name">Nombre y apellido:</label>
+                <input type="text" id="name" name="nombre_contacto">
+            </li>
+            <li>
+                <label for="mail">Correo electrónico:</label>
+                <input type="email" id="mail" name="correo_contacto">
+            </li>
+            <li>
+                <label for="tel">Telefono</label>
+                <input type="tel" id="tel" name="telefono_contacto">
+            </li>
+            <li>
+                <label for="servicio">Servicios</label>
+                <select name="servicio">
+                    <option value="servicio1" selected>Desarrollo de software</option>
+                    <option value="servicio2">Mantenimiento</option>
+                    <option value="servicio3">Arrendamiento </option>
+                    <option value="servicio3">Instalacion de camaras </option>
+                </select>
+            </li>
+            <li>
+                <label for="msg">Mensaje:</label>
+                <textarea id="msg" name="user_message"></textarea>
+            </li>
+                <li class="button">
+                <button type="submit">Envíe su mensaje</button>
+            </li>
+        </ul>
+            
+       </form>
+
+    <!-- Seccion del footer-->
+    <footer>
+        <div class="pantalla-mitad centrar-contenido-todo">
+                <h2> Autor </h2>
+                <p> Liliana Abigail Salinas Zarzosa </p>
+        </div>
+
+        <div class="pantalla-mitad centrar-contenido-todo">
+            <h1> Contacto </h1>
+            <a href="mailto:hege@example.com">tere@example.com</a></p>
+        </div>
+    </footer>
+   
 </body>
 </html>
