@@ -1,0 +1,123 @@
+table, td, th {
+    border: 1px solid;
+  }
+  
+  .contenedor-tabla{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .tablita{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+  }
+
+  /*   
+    th: encabezado
+    td: fila
+    tr: bordes
+  */
+
+  .tablita th{
+    background-color: #092147;
+    color: #f5cf27;
+    text-align: center;
+    height: 30px;
+  }
+
+  .tablita td{
+    text-align: left;
+  }
+
+  .tablita tr{
+    border: 2px solid #092147;
+  }
+
+  .tablita tr:hover{
+    background-color: #f5cf27;
+    color: #092147;
+  }
+
+
+
+
+  /* -------------- COLORES -------------- */
+.fondo-blanco {
+    background-color: white;
+}
+
+.fondo-azul{
+    background-color: 092147;
+}
+
+.fondo-amarillo {
+    background-color: #f5cf27;
+}
+
+.color-negro {
+    color:black;
+}
+
+.color-blanco{
+    color: #ffff;
+}
+
+.color-azul{
+    color:#092147
+}
+
+.color-amarillo{
+    color: #f5cf27
+}
+
+
+
+
+/*  ------ seccion de busqueda y 
+            creacion solicitud ------ */
+
+
+.seccion-solicitud {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #092147;
+    color: #f5cf27;
+}
+
+.texto-solicitud {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.btn-crear-solicitud {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btn-crear-solicitud a{
+    text-decoration: none;
+    background-color: #f5cf27;
+    height: 25px;
+    width: 100px;
+    margin: 0px 20px 0px 0px;
+    border-radius: 15px;
+    padding: 10px 5px 5px 8px;
+    border: 1px solid #fff;
+}
+
+
+ /* -- Media queries para las secciones segun el tamaño -- */
+
+
