@@ -5,8 +5,9 @@
     box-sizing: border-box;
 }
 
+
 /* Tipo de letra  */
-h2,p ,label,a {
+h2,p,label,a,button {
     font: 1em sans-serif;
 }
 
@@ -81,21 +82,23 @@ form {
   
   input,
   textarea,select {
-    /* Para asegurarse de que todos los campos de texto tienen la misma configuración de letra
-       Por defecto, las áreas de texto tienen un tipo de letra monoespaciada */
-  
     /* Tamaño uniforme del campo de texto */
     width: 300px;
     box-sizing: border-box;
-  
+    
     /* Hacer coincidir los bordes del campo del formulario */
-    border: 1px solid #999;
+    border: 1px solid #092147;
+    border-radius: 5px;
+  }
+
+  input, select {
+    height: 30px;
   }
   
   input:focus,
   textarea:focus {
     /* Destacado adicional para elementos que tienen el cursor */
-    border-color: #000;
+    border-color: #092147;
   }
   
   textarea {
@@ -108,13 +111,20 @@ form {
   
   .button {
     /* Alinear los botones con los campos de texto */
-    padding-left: 90px; /* mismo tamaño que los elementos de la etiqueta */
+    padding-left: 0px; /* mismo tamaño que los elementos de la etiqueta */
   }
   
   button {
     /* Este margen adicional representa aproximadamente el mismo espacio que el espacio
        entre las etiquetas y sus campos de texto */
-    margin-left: .5em;
+    margin-left: 0em;
+    box-sizing: content-box;
+    width: 100%;
+    height: 50px;
+    background-color: #f5cf27;
+    color: #092147;
+    border-radius: 90px;
+    border: none;
   }
 
 
@@ -143,6 +153,15 @@ form {
 
 .titulo-seccion h1 {
     align-self: center;
+}
+
+.login{
+    height: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #092147;
+    border-top: 2px solid #f5cf27;
 }
 
 
@@ -184,13 +203,17 @@ form {
 
 
 
-/* COLORES  */
+/* -------------- COLORES -------------- */
 .fondo-blanco {
     background-color: white;
 }
 
 .fondo-azul{
-    background-color: blue;
+    background-color: 092147;
+}
+
+.fondo-amarillo {
+    background-color: #f5cf27;
 }
 
 .color-negro {
@@ -201,10 +224,18 @@ form {
     color: #ffff;
 }
 
+.color-azul{
+    color:#092147
+}
+
+.color-amarillo{
+    color: #f5cf27
+}
 
 
 
-/* TAMAÑOS */
+
+/* ---------------- Diseños para responsive ---------- */
 /* Tamaño pequeño < 576px */
 @media (max-width: 576px) {
     .seccion-primera{

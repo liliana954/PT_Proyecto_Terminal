@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <title>Login</title>
+</head>
+<body>
+    <!--Barra de navegacion-->
+    <nav class="pantalla-completa">
+        <div class="pantalla-mitad centrar-contenido-unico fondo-blanco borde-derecho-amarillo borde-inferior-azul">
+            <img src="/Utils/Imagenes/mini_logo.jpeg" alt="logo">
+        </div>
+        
+        <div class="pantalla-mitad centrar-contenido-navbar"> 
+            <a href="/index.html">Inicio</a>
+            <a href="#">Servicios</a>
+            <a href="#">Contacto</a>
+            <a href="/login.html"> Login </a>
+        </div>
+    </nav>
+
+    <div class="login">
+        <form action="#" method="post">
+            <ul>
+                <li>
+                    <label for="empleado">Tipo de usuario</label>
+                    <select name="empleado">
+                        <option value="empleado1" selected>Empleado</option>
+                        <option value="empleado2">Gerente </option>
+                        <option value="empleado3">Administracion</option>
+                        <option value="empleado4">Otro</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="name">Usuario</label>
+                    <input type="text" id="name" name="nombre_contacto">
+                </li>
+                <li>
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="correo_contacto">
+                </li>
+                <li class="button">
+                    <button type="submit">Ingresar</button>
+                </li>
+            </ul>
+                
+           </form>
+
+
+    </div>
+
+
+    <!-- Seccion del footer-->
+    <footer>
+        <div class="pantalla-mitad centrar-contenido-todo">
+                <h2> Autor </h2>
+                <p> Liliana Abigail Salinas Zarzosa </p>
+        </div>
+
+        <div class="pantalla-mitad centrar-contenido-todo">
+            <h1> Contacto </h1>
+            <a href="mailto:hege@example.com">tere@example.com</a></p>
+        </div>
+    </footer>
+
+
+</body>
+</html>
