@@ -1,0 +1,52 @@
+/*Valores fuentes*/
+Títulos                 {font-family:  Helvetica, Arial, sans-serif;    
+                         font-weight: bold;
+                         font-size:25px
+}
+Texto general           {font-family:  Helvetica, Arial, sans-serif;
+                         font-size:16px
+}
+/*BOTONES DE FORMULARIOS*/
+Caracteristicas generales        {border: none;
+                                  font-weight: bold;
+                                  padding: 12px 28px;
+                                  font-size: 16px;
+                                  cursor: pointer;
+                                  border-radius: 15px;
+                                  width: 250px; /*es variable en %*/
+}
+
+Boton de Registrar/guardar      {background-color: #f5cf27;
+                                 color: black;
+}
+Boton de Cancelar       {background-color: gray;
+                         color: white;
+}
+Boton de limpiar        {background-color: #092147;
+                         color: white;
+}
+
+/*BOTON CREAR NUEVO REGISTRO*/
+Boton crear             {background-color: #f5cf27;
+                         border: 2px solid white;
+                         color: black;
+                         padding: 12px 28px;
+                         font-size: 16px;
+                         border-radius: 15px;
+}
+
+/*BOTONES DE MENSAJE DE ELIMINAR*/
+Boton OK                 {background-color: #092147;
+                          border: none;
+                          color: white;
+                          padding: 6px 16px;
+                          font-size: 16px;
+                          border-radius: 15px;
+}
+Boton Cancelar           {background-color: red;
+                          border: none;
+                          color: white;
+                          padding: 6px 16px;
+                          font-size: 16px;
+                          border-radius: 15px;
+}
