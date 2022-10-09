@@ -1,0 +1,59 @@
+h1 {
+    text-align: center;
+}
+
+table {
+    margin-top: 25px;
+    caption-side: bottom;
+    margin-left:auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+td,th{
+  border: 1px solid black;
+  padding: 20px 20px 20px 20px ;
+}
+
+th {
+    background-color: black;
+    color: #3FA535;;
+}
+
+.seccion_tabla{
+    overflow-x:auto;
+}
+
+
+.btn-tabla-modificar{
+    background: #283583;
+    color: white;
+    text-decoration: none;
+    width: 50%;
+    padding: 15px;
+    margin: auto;
+    border-radius: 3px;
+    border: 1px solid #3FA535;
+    font-size: 15px;
+}
+
+
+.btn-tabla-agregar{
+    background: #3FA535;
+    color: white;
+    text-decoration: none;
+    width: 50%;
+    padding: 15px;
+    margin: auto;
+    border-radius: 3px;
+    border: 1px solid #3FA535;
+    font-size: 15px;
+}
+
+.seccion_funcionesExtra{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin-top: 50px;
+}
