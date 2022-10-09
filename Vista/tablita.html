@@ -1,49 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Styles/tabla_estilos.css" type="text/css"/>
+    <link rel="stylesheet" href="/Styles/tabla_estilos.css" type="text/css" />
     <title>Tabla plantilla</title>
 </head>
+
 <body>
-
-
-    <hr>
-
     <div class="seccion-busqueda">
-        <div class="filtrado">
-            <h4> Filtro para tabla - pendiente </h4>
-        </div> 
         <div class="barra-busqueda">
-            <label for="Buscar" class="label-buscar"> Buscar: </label>
-            <input type="text" class="input-buscar-texto" placeholder="Ingresa dato a buscar"> 
-            <button type="submit" class="boton-buscar">Buscar</button>
-        </div>   
+            <label for="Filtrar" class="label-buscar"> Buscar: </label>
+            <input type="text" class="input-buscar-texto" id="myInput" onkeyup="myFunction()" placeholder="Filtro por nombre">
+        </div>
     </div>
 
     <hr>
 
+
+
+    <hr>
+
     <div class="contenedor-tabla">
-        <table class="tablita">
+        <table class="tablita" id="myTable">
             <tr>
-            <th>Firstname</th>
-            <th>Lastname</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Modificar</th>
+                <th>Eliminar</th>
             </tr>
             <tr>
-            <td>Peter</td>
-            <td>Griffin</td>
+                <td>Peter</td>
+                <td>Griffin</td>
+                <td><a href="#"><img src="/Utileria/Iconos/edit.png"></a></td>
+                <td><a href="#"><img src="/Utileria/Iconos/delete.png"></a></td>
             </tr>
             <tr>
-            <td>Lois</td>
-            <td>Griffin</td>
+                <td>Lois</td>
+                <td>Griffin</td>
             </tr>
         </table>
     </div>
 
     <hr>
-    
+
     <div class="seccion-solicitud">
         <div class="texto-solicitud">
             <h3> Generar una nueva solicitud</h3>
@@ -55,6 +57,26 @@
 
 
 
-
+    <script>
+        function myFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
 </body>
+
 </html>

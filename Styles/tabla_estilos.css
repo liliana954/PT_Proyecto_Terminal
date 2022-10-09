@@ -29,7 +29,7 @@ table, td, th {
   }
 
   .tablita td{
-    text-align: left;
+    text-align: center;
   }
 
   .tablita tr{
@@ -157,6 +157,7 @@ table, td, th {
 
 .input-buscar-texto{
   padding: 8px 10px;
+  width: 50%;
 }
 
 .label-buscar{
