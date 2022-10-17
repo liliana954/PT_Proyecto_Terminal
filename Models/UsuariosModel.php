@@ -31,7 +31,7 @@
 			
 		}
 		
-		public function modificar($idUsuario, $nombreUsuario, $contra_usuario, $id_tipo_usuario,){
+		public function modificar($idUsuario, $nombreUsuario, $contra_usuario, $id_tipo_usuario){
 			
 			$resultado = $this->db->query("UPDATE usuario 
             SET nombreUsuario='$nombreUsuario', contra_usuario='$contra_usuario', id_tipo_usuario='$id_tipo_usuario'=' 
