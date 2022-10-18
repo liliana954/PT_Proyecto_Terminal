@@ -19,10 +19,10 @@
 				<table border="1" width="80%" class="">
 					<thead>
 						<tr class="">
-							<th>id_usuario</th>
-							<th>nombreUsuario</th>
-							<th>contra_usuario</th>
-							<th>id_tipo_usuario</th>
+							<th>id usuario</th>
+							<th>Nombre Usuario</th>
+							<th>Contra Usuario</th>
+							<th>id tipo usuario</th>
 							<th>Editar</th>
 							<th>Eliminar</th>
 						</tr>
