@@ -11,7 +11,7 @@
 		<div class="">
 			<h2><?php echo $data["titulo"]; ?></h2>
 			
-			<a href="index.php?c=usuarios&a=crear" class="btn">Agregar</a>
+			<a href="index2.php?c=usuarios&a=nuevo" class="#">Agregar</a>
 			
 			<br />
 			<br />
@@ -35,8 +35,8 @@
 							echo "<td>".$dato["nombre_usuario"]."</td>";
 							echo "<td>".$dato["contra_usuario"]."</td>";
 							echo "<td>".$dato["id_tipo_usuario"]."</td>";
-							echo "<td><a href='index2.php?c=usuarios&a=modificar&id_usuario=".$dato["id_usuario"]."' class='btn'>Modificar</a></td>";
-							echo "<td><a href='index2.php?c=usuarios&a=eliminar&id_usuario=".$dato["id_usuario"]."' class='btn'>Eliminar</a></td>";
+							echo "<td><a href='index2.php?c=usuarios&a=modificar&id_usuario=".$dato["id_usuario"]."' class='#'>Modificar</a></td>";
+							echo "<td><a href='index2.php?c=usuarios&a=eliminar&id_usuario=".$dato["id_usuario"]."' class='#'>Eliminar</a></td>";
 							echo "</tr>";
 						}
 						?>

@@ -21,7 +21,7 @@
 			return $this->usuarios;
 		}
 		
-        // No se incluye el idUsuario por que es autoincrementable
+        // No se incluye el id_usuario por que es autoincrementable
 		public function insertar($nombre_usuario, $contra_usuario, $id_tipo_usuario){
 			
 			$resultado = $this->db->query("INSERT INTO usuario 
@@ -31,28 +31,26 @@
 			
 		}
 		
-		public function modificar($idUsuario, $nombre_usuario, $contra_usuario, $id_tipo_usuario){
+		public function modificar($id_usuario, $nombre_usuario, $contra_usuario, $id_tipo_usuario){
 			
-			$resultado = $this->db->query("UPDATE usuario 
-            SET nombre_usuario='$nombre_usuario', contra_usuario='$contra_usuario', id_tipo_usuario='$id_tipo_usuario'=' 
-            WHERE id_usuario = '$idUsuario'");			
+			$resultado = $this->db->query("UPDATE usuario SET nombre_usuario='$nombre_usuario',contra_usuario='$contra_usuario',id_tipo_usuario='$id_tipo_usuario' WHERE id_usuario = '$id_usuario'");			
 		}
 		
-		public function eliminar($idUsuario){
+		public function eliminar($id_usuario){
 			
-			$resultado = $this->db->query("DELETE FROM usuario WHERE id_usuario = '$idUsuario'");
+			$resultado = $this->db->query("DELETE FROM usuario WHERE id_usuario = '$id_usuario'");
 			
 		}
 		
-		/*
-		public function get_usuarios($idUsuario)
+		
+		public function get_usuarios_especifico($id_usuario)
 		{
-			$sql = "SELECT * FROM usuario WHERE id_usuario='$idUsuario' LIMIT 1";
+			$sql = "SELECT * FROM usuario WHERE id_usuario='$id_usuario' LIMIT 1";
 			$resultado = $this->db->query($sql);
 			$row = $resultado->fetch_assoc();
 
 			return $row;
 		}
-		*/
+		
 	} 
 ?>

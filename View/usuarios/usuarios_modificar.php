@@ -17,13 +17,13 @@
 			
 			<h2><?php echo $data["titulo"]; ?></h2>
 			
-			<form id="nuevo" name="nuevo" method="POST" action="index.php?c=usuarios&a=actualizar" autocomplete="off">
+			<form id="nuevo" name="nuevo" method="POST" action="index2.php?c=usuarios&a=actualizar" autocomplete="off">
 				
 				<input type="hidden" id="id_usuario" name="id_usuario" value="<?php echo $data["id_usuario"]; ?>" />
 				
 				<div class="#">
 					<label for="nombre_usuario">Nombre usuario</label>
-					<input type="text" class="#" id="nombre_usuario" name="nombre_usuario" value="<?php echo $data["usuarios"]["nombreUsuario"]?>" />
+					<input type="text" class="#" id="nombre_usuario" name="nombre_usuario" value="<?php echo $data["usuarios"]["nombre_usuario"]?>" />
 				</div>
 				
 				<div class="#">
