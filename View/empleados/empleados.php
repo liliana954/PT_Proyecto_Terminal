@@ -11,7 +11,7 @@
 		<div class="">
 			<h2><?php echo $data["titulo"]; ?></h2>
 			
-			<a href="index.php?c=empleados&a=crear" class="btn">Agregar</a>
+			<a href="empleadosView.php?c=empleados&a=nuevo" class="#">Agregar</a>
 			
 			<br />
 			<br />
@@ -51,8 +51,8 @@
                             echo "<td>".$dato["activo"]."</td>";
                             echo "<td>".$dato["id_rol_empleado"]."</td>";
                             echo "<td>".$dato["id_usuario"]."</td>";
-							echo "<td><a href='index.php?c=empleados&a=modificar&id_empleado=".$dato["id_empleado"]."' class='#'>Modificar</a></td>";
-							echo "<td><a href='index.php?c=empleados&a=eliminar&id_empleado=".$dato["id_empleado"]."' class='#'>Eliminar</a></td>";
+							echo "<td><a href='empleadosView.php?c=empleados&a=modificar&id_empleado=".$dato["id_empleado"]."' class='#'>Modificar</a></td>";
+							echo "<td><a href='empleadosView.php?c=empleados&a=eliminar&id_empleado=".$dato["id_empleado"]."' class='#'>Eliminar</a></td>";
 							echo "</tr>";
 						}
 						?>
