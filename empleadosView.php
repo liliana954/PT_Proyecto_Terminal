@@ -20,7 +20,7 @@
 				}
 		} else {
 		
-		$controlador = cargarControlador(SECCION_USUARIOS);
+		$controlador = cargarControlador(SECCION_EMPLEADOS);
 		$accionTmp = PAGINA_PRINCIPAL;
 		$controlador->$accionTmp();
 	}

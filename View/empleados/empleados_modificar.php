@@ -11,7 +11,7 @@
 		<div class="">
 			<h2><?php echo $data["titulo"]; ?></h2>
 			<!-- Se manda a llamar al metodo guarda , y el id del form es nuevo-->
-			<form id="nuevo" name="nuevo" method="POST" action="index.php?c=empleados&a=actualizar" autocomplete="off">
+			<form id="nuevo" name="nuevo" method="POST" action="empleadosView.php?c=empleados&a=actualizar" autocomplete="off">
 				<div class="#">
 					<label for="nombre">Nombres empleado</label>
 					<input type="text" class="#" id="nombre" name="nombre" />

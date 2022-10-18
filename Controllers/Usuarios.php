@@ -44,7 +44,7 @@
 			
 			$data["id_usuario"] = $id_usuario;
             // Consulta el usuario con ese id
-			$data["usuarios"] = $usuarios->get_usuarios($id_usuario);
+			$data["usuarios"] = $usuarios->get_usuarios_especifico($id_usuario);
 			$data["titulo"] = "Usuarios";
 			require_once "View/usuarios/usuarios_modificar.php";
 		}
@@ -52,7 +52,7 @@
 
         // Actualiza la tabla con los datos recien modificados
 		public function actualizar(){
-
+			
             $id_usuario = $_POST['id_usuario'];
 			$nombre_usuario = $_POST['nombre_usuario'];
 			$contra_usuario = $_POST['contra_usuario'];

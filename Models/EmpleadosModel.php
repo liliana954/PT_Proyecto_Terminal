@@ -64,7 +64,7 @@
             fecha_ingreso='$fecha_ingreso',
             activo='$activo',
             id_rol_empleado='$id_rol_empleado',
-            id_usuario='$id_usuario'=' 
+            id_usuario='$id_usuario' 
             WHERE id_empleado = '$id_empleado'");			
 		}
 		
@@ -74,7 +74,7 @@
 			
 		}
 		
-		public function get_empleados($id_empleado)
+		public function get_empleados_especifico($id_empleado)
 		{
 			$sql = "SELECT * FROM empleado WHERE id_empleado='$id_empleado' LIMIT 1";
 			$resultado = $this->db->query($sql);

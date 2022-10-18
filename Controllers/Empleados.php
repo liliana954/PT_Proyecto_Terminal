@@ -12,13 +12,13 @@
             // Se manda a gamar al metodo get del model
 			$data["empleado"] = $empleado->get_empleados();
             // Se manda a llamar a la vista de empleados - la tabla
-			require_once "views/empleados/empleados.php";	
+			require_once "View/empleados/empleados.php";	
 		}
 
 		// Si se agrega un nuevo usuario, se hace uso de este metodo y se abre la vista
 		public function nuevo(){
 			$data["titulo"] = "Empleado";
-			require_once "views/empleados/empleados_crear.php";
+			require_once "View/empleados/empleados_crear.php";
 		}
 		
         // Obtiene los datos del formulario y los guarda en la bd
@@ -52,9 +52,9 @@
 			
 			$data["id_empleado"] = $id_empleado;
             // Consulta el usuario con ese id
-			$data["empleados"] = $empleados->get_empleados($id_empleado);
+			$data["empleados"] = $empleados->get_empleados_especifico($id_empleado);
 			$data["titulo"] = "Empleados";
-			require_once "views/empleados/empleados_modificar.php";
+			require_once "View/empleados/empleados_modificar.php";
 		}
 		
 
