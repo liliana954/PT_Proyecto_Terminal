@@ -22,19 +22,19 @@
 		}
 		
         // No se incluye el idUsuario por que es autoincrementable
-		public function insertar($nombreUsuario, $contra_usuario, $id_tipo_usuario){
+		public function insertar($nombre_usuario, $contra_usuario, $id_tipo_usuario){
 			
 			$resultado = $this->db->query("INSERT INTO usuario 
-            (nombreUsuario, contra_usuario, id_tipo_usuario) 
+            (nombre_usuario, contra_usuario, id_tipo_usuario) 
             VALUES 
-            ('$nombreUsuario', '$contra_usuario', '$id_tipo_usuario')");
+            ('$nombre_usuario', '$contra_usuario', '$id_tipo_usuario')");
 			
 		}
 		
-		public function modificar($idUsuario, $nombreUsuario, $contra_usuario, $id_tipo_usuario){
+		public function modificar($idUsuario, $nombre_usuario, $contra_usuario, $id_tipo_usuario){
 			
 			$resultado = $this->db->query("UPDATE usuario 
-            SET nombreUsuario='$nombreUsuario', contra_usuario='$contra_usuario', id_tipo_usuario='$id_tipo_usuario'=' 
+            SET nombre_usuario='$nombre_usuario', contra_usuario='$contra_usuario', id_tipo_usuario='$id_tipo_usuario'=' 
             WHERE id_usuario = '$idUsuario'");			
 		}
 		
@@ -44,6 +44,7 @@
 			
 		}
 		
+		/*
 		public function get_usuarios($idUsuario)
 		{
 			$sql = "SELECT * FROM usuario WHERE id_usuario='$idUsuario' LIMIT 1";
@@ -52,5 +53,6 @@
 
 			return $row;
 		}
+		*/
 	} 
 ?>

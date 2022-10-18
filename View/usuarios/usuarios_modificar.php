@@ -22,8 +22,8 @@
 				<input type="hidden" id="id_usuario" name="id_usuario" value="<?php echo $data["id_usuario"]; ?>" />
 				
 				<div class="#">
-					<label for="nombreUsuario">Nombre usuario</label>
-					<input type="text" class="#" id="nombreUsuario" name="nombreUsuario" value="<?php echo $data["usuarios"]["nombreUsuario"]?>" />
+					<label for="nombre_usuario">Nombre usuario</label>
+					<input type="text" class="#" id="nombre_usuario" name="nombre_usuario" value="<?php echo $data["usuarios"]["nombreUsuario"]?>" />
 				</div>
 				
 				<div class="#">

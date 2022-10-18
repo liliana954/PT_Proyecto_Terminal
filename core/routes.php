@@ -10,11 +10,11 @@
     function cargarControlador($controlador){
 		
 		$nombreControlador = ucwords($controlador)."Controller";
-		$archivoControlador = 'controllers/'.ucwords($controlador).'.php';
+		$archivoControlador = 'Controllers/'.ucwords($controlador).'.php';
 		
 		if(!is_file($archivoControlador)){
 			
-			$archivoControlador= 'controllers/'.SECCION_EMPLEADOS.'.php';
+			$archivoControlador= 'Controllers/'.SECCION_USUARIOS.'.php';
 			
 		}
 		require_once $archivoControlador;
