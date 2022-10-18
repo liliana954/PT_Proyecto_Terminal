@@ -51,8 +51,8 @@
                             echo "<td>".$dato["activo"]."</td>";
                             echo "<td>".$dato["id_rol_empleado"]."</td>";
                             echo "<td>".$dato["id_usuario"]."</td>";
-							echo "<td><a href='empleadosView.php?c=empleados&a=modificar&id_empleado=".$dato["id_empleado"]."' class='#'>Modificar</a></td>";
-							echo "<td><a href='empleadosView.php?c=empleados&a=eliminar&id_empleado=".$dato["id_empleado"]."' class='#'>Eliminar</a></td>";
+							echo "<td><a href='empleadosView.php?c=empleados&a=modificar&id=".$dato["id_empleado"]."' class='#'>Modificar</a></td>";
+							echo "<td><a href='empleadosView.php?c=empleados&a=eliminar&id=".$dato["id_empleado"]."' class='#'>Eliminar</a></td>";
 							echo "</tr>";
 						}
 						?>

@@ -35,8 +35,8 @@
 							echo "<td>".$dato["nombre_usuario"]."</td>";
 							echo "<td>".$dato["contra_usuario"]."</td>";
 							echo "<td>".$dato["id_tipo_usuario"]."</td>";
-							echo "<td><a href='index2.php?c=usuarios&a=modificar&id_usuario=".$dato["id_usuario"]."' class='#'>Modificar</a></td>";
-							echo "<td><a href='index2.php?c=usuarios&a=eliminar&id_usuario=".$dato["id_usuario"]."' class='#'>Eliminar</a></td>";
+							echo "<td><a href='index2.php?c=usuarios&a=modificar&id=".$dato["id_usuario"]."' class='#'>Modificar</a></td>";
+							echo "<td><a href='index2.php?c=usuarios&a=eliminar&id=".$dato["id_usuario"]."' class='#'>Eliminar</a></td>";
 							echo "</tr>";
 						}
 						?>

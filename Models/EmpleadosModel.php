@@ -54,18 +54,7 @@
 		public function modificar($id_empleado, $nombre, $apellido_paterno, $apellido_materno,$rfc, $curp, $telefono, $correo, $fecha_ingreso, $activo, $id_rol_empleado, $id_usuario){
 			
 			$resultado = $this->db->query("UPDATE empleado 
-            SET nombre='$nombre', 
-            apellido_paterno='$apellido_paterno', 
-            apellido_materno='$apellido_materno',
-            rfc='$rfc',
-            curp='$curp',
-            telefono='$telefono',
-            correo='$correo',
-            fecha_ingreso='$fecha_ingreso',
-            activo='$activo',
-            id_rol_empleado='$id_rol_empleado',
-            id_usuario='$id_usuario' 
-            WHERE id_empleado = '$id_empleado'");			
+            SET nombre='$nombre',apellido_paterno='$apellido_paterno',apellido_materno='$apellido_materno',rfc='$rfc',curp='$curp',telefono='$telefono',correo='$correo',fecha_ingreso='$fecha_ingreso',activo='$activo',id_rol_empleado='$id_rol_empleado',id_usuario='$id_usuario' WHERE id_empleado = '$id_empleado'");			
 		}
 		
 		public function eliminar($id_empleado){
