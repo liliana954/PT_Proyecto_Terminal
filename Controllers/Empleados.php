@@ -1,6 +1,6 @@
 <?php
 	
-	class UsuariosController {
+	class  EmpleadosController {
 		
 		public function __construct(){
 			require_once "models/EmpleadosModel.php";
@@ -11,7 +11,7 @@
 			$data["titulo"] = "Empleado";
             // Se manda a gamar al metodo get del model
 			$data["empleado"] = $empleado->get_empleados();
-            // Se manda a llamar a la vista de usuarios - la tabla
+            // Se manda a llamar a la vista de empleados - la tabla
 			require_once "views/empleados/empleados.php";	
 		}
 

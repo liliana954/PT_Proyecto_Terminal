@@ -1,8 +1,8 @@
 <?php
     $server = "localhost";  // siempre va localhost
-    $user = "siecymel_Kilzms234"; // usuario hosting
-    $password ="L4742#3157_L"; // contraseña hosting
-    $dbname = "siecymel_funcInternasSiec";  // nombre BD
+    $user = "siatechm"; // usuario hosting
+    $password ="DesarrolloSiatech2022"; // contraseña hosting
+    $dbname = "siatechm_siatechmx";  // nombre BD
 
     try {
         // Conectar la BD
