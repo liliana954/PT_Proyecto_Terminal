@@ -3,14 +3,14 @@
 	class  EmpleadosController {
 		
 		public function __construct(){
-			require_once "models/EmpleadosModel.php";
+			require_once "Models/EmpleadosModel.php";
 		}
 		
 		public function index(){
 			$empleados = new Empleados_model();
 			$data["titulo"] = "Empleado";
             // Se manda a gamar al metodo get del model
-			$data["empleado"] = $empleado->get_empleados();
+			$data["empleados"] = $empleados->get_empleados();
             // Se manda a llamar a la vista de empleados - la tabla
 			require_once "View/empleados/empleados.php";	
 		}
@@ -48,7 +48,7 @@
         // Modifica los datos del id usuario especificado
 		public function modificar($id_empleado){
 			
-			$usuarios = new Usuarios_model();
+			$empleados = new Empleados_model();
 			
 			$data["id_empleado"] = $id_empleado;
             // Consulta el usuario con ese id
@@ -74,9 +74,8 @@
 			$id_rol_empleado = $_POST['id_rol_empleado'];
 			$id_usuario = $_POST['id_usuario'];
 
-			$empleados = new Usuarios_model();
-			$empleados->modificar($id_empleado, $nombre, $apellido_paterno, $apellido_materno
-            ,$rfc, $curp, $telefono, $correo, $fecha_ingreso, $activo, $id_rol_empleado, $id_usuario);
+			$empleados = new Empleados_model();
+			$empleados->modificar($id_empleado, $nombre, $apellido_paterno, $apellido_materno,$rfc, $curp, $telefono, $correo, $fecha_ingreso, $activo, $id_rol_empleado, $id_usuario);
 			$data["titulo"] = "Empleados";
 			$this->index();
 		}
