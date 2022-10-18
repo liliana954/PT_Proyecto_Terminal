@@ -12,10 +12,10 @@
 			<h2><?php echo $data["titulo"]; ?></h2>
 			<!-- Se manda a llamar al metodo guarda , y el id del form es nuevo-->
 			<!-- en el action poner la ruta al controlador -->
-			<form id="nuevo" name="nuevo" method="POST" action="index.php?c=usuarios&a=guarda" autocomplete="off">
+			<form id="nuevo" name="nuevo" method="POST" action="index2.php?c=usuarios&a=guarda" autocomplete="off">
 				<div class="#">
-					<label for="nombreUsuario">Nombre Usuario</label>
-					<input type="text" class="#" id="nombreUsuario" name="nombreUsuario" />
+					<label for="nombre_usuario">Nombre Usuario</label>
+					<input type="text" class="#" id="nombre_usuario" name="nombre_usuario" />
 				</div>
 				
 				<div class="#">

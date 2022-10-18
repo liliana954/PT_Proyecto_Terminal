@@ -32,11 +32,11 @@
 						<?php foreach($data["usuarios"] as $dato) {
 							echo "<tr>";
 							echo "<td>".$dato["id_usuario"]."</td>";
-							echo "<td>".$dato["nombreUsuario"]."</td>";
+							echo "<td>".$dato["nombre_usuario"]."</td>";
 							echo "<td>".$dato["contra_usuario"]."</td>";
 							echo "<td>".$dato["id_tipo_usuario"]."</td>";
-							echo "<td><a href='index.php?c=usuarios&a=modificar&id_usuario=".$dato["id_usuario"]."' class='btn'>Modificar</a></td>";
-							echo "<td><a href='index.php?c=usuarios&a=eliminar&id_usuario=".$dato["id_usuario"]."' class='btn'>Eliminar</a></td>";
+							echo "<td><a href='index2.php?c=usuarios&a=modificar&id_usuario=".$dato["id_usuario"]."' class='btn'>Modificar</a></td>";
+							echo "<td><a href='index2.php?c=usuarios&a=eliminar&id_usuario=".$dato["id_usuario"]."' class='btn'>Eliminar</a></td>";
 							echo "</tr>";
 						}
 						?>

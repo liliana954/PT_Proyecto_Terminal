@@ -3,7 +3,7 @@
 	class UsuariosController {
 		
 		public function __construct(){
-			require_once "models/UsuariosModel.php";
+			require_once "Models/UsuariosModel.php";
 		}
 		
 		public function index(){
@@ -13,26 +13,26 @@
 			$data["usuarios"] = $usuarios->get_usuarios();
 			
             // Se manda a llamar a la vista de usuarios - la tabla
-			require_once "views/usuarios/usuarios.php";	
+			require_once "View/usuarios/usuarios.php";	
 		}
 
 		// Si se agrega un nuevo usuario, se hace uso de este metodo y se abre la vista
 		public function nuevo(){
 			$data["titulo"] = "Usuarios";
-			require_once "views/vehiculos/usuarios_crear.php";
+			require_once "View/usuarios/usuarios_crear.php";
 		}
 		
         // Obtiene los datos del formulario y los guarda en la bd
 		public function guarda(){
             // Las variables de la izquierda es la que obtienen el valor
             // Las variables que vienen con el POST son las que se enviaron desde el formulario
-			$nombreUsuario = $_POST['nombreUsuario'];
+			$nombre_usuario = $_POST['nombre_usuario'];
 			$contra_usuario = $_POST['contra_usuario'];
 			$id_tipo_usuario = $_POST['id_tipo_usuario'];
 			
 			$usuarios = new Usuarios_model();
             // Parametros que se guardaran de los usuarios
-			$usuarios->insertar($nombreUsuario, $contra_usuario, $id_tipo_usuario);
+			$usuarios->insertar($nombre_usuario, $contra_usuario, $id_tipo_usuario);
 			$data["titulo"] = "Usuarios";
 			$this->index();
 		}
@@ -46,7 +46,7 @@
             // Consulta el usuario con ese id
 			$data["usuarios"] = $usuarios->get_usuarios($id_usuario);
 			$data["titulo"] = "Usuarios";
-			require_once "views/vehiculos/usuarios_modificar.php";
+			require_once "View/usuarios/usuarios_modificar.php";
 		}
 		
 
@@ -54,12 +54,12 @@
 		public function actualizar(){
 
             $id_usuario = $_POST['id_usuario'];
-			$nombreUsuario = $_POST['nombreUsuario'];
+			$nombre_usuario = $_POST['nombre_usuario'];
 			$contra_usuario = $_POST['contra_usuario'];
 			$id_tipo_usuario = $_POST['id_tipo_usuario'];
 
 			$usuarios = new Usuarios_model();
-			$usuarios->modificar($id_usuario, $nombreUsuario, $contra_usuario, $id_tipo_usuario);
+			$usuarios->modificar($id_usuario, $nombre_usuario, $contra_usuario, $id_tipo_usuario);
 			$data["titulo"] = "Usuarios";
 			$this->index();
 		}
@@ -67,7 +67,7 @@
 		public function eliminar($id_usuario){
 			
 			$usuarios = new Usuarios_model();
-			$vehiculos->eliminar($id_usuario);
+			$usuarios->eliminar($id_usuario);
 			$data["titulo"] = "Usuarios";
 			$this->index();
 		}	
