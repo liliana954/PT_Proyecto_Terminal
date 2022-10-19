@@ -18,29 +18,29 @@
             <a href="/index.html">Quienes somos</a>
             <a href="#">Servicios</a>
             <a href="#">Contacto</a>
-            <a href="/login.html"> Login </a>
+            <a href="/login.php"> Login </a>
         </div>
     </nav>
 
     <div class="login">
-        <form action="#" method="post">
+        <form action="../Controllers/iniciarSesion.php" method="post">
             <ul>
                 <li>
-                    <label for="empleado">Tipo de usuario</label>
-                    <select name="empleado">
-                        <option value="empleado1" selected>Empleado</option>
-                        <option value="empleado2">Gerente </option>
-                        <option value="empleado3">Administracion</option>
+                    <label for="id_tipo_usuario">Tipo de usuario</label>
+                    <select name="id_tipo_usuario">
+                        <option value="empleado1">Administrador</option>
+                        <option value="empleado2" selected >Empleado </option>
+                        <option value="empleado3">Pruebas</option>
                         <option value="empleado4">Otro</option>
                     </select>
                 </li>
                 <li>
-                    <label for="name">Usuario</label>
-                    <input type="text" id="name" name="nombre_contacto">
+                    <label for="nombre_usuario">Usuario</label>
+                    <input type="text" id="nombre_usuario" name="nombre_usuario">
                 </li>
                 <li>
-                    <label for="password">Contraseña</label>
-                    <input type="password" id="password" name="correo_contacto">
+                    <label for="contra_usuario">Contraseña</label>
+                    <input type="password" id="contra_usuario" name="contra_usuario">
                 </li>
                 <li class="button">
                     <button type="submit">Ingresar</button>
