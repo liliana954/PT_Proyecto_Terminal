@@ -9,13 +9,27 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title><?php echo $data["titulo"]; ?></title>
 		<link rel="stylesheet" href="#">
+		<link rel="stylesheet" href="/Styles/estilos_formulario.css">
 
 	</head>
 	
 	<body>
-		<div class="#">
+		<nav class="pantalla-completa">
+            <div class="pantalla-mitad centrar-contenido-unico fondo-blanco borde-derecho-amarillo borde-inferior-azul">
+                <img src="/Utileria/Imagenes/mini_logo.jpeg" alt="Logo">
+            </div>
+            
+            <div class="pantalla-mitad centrar-contenido-navbar"> 
+                <a href="/empleadosView.php">Empleados</a>
+                <a href="/index2.php">Usuarios</a>
+                <a href="#" disabled> Cerrar sesion </a>
+            </div>
+        </nav>
+
+		<h2 class="centrar-titulo"><?php echo $data["titulo"]; ?></h2>
+		<div class="contenedor-formulario">
 			
-			<h2><?php echo $data["titulo"]; ?></h2>
+			
 			
 			<form id="nuevo" name="nuevo" method="POST" action="index2.php?c=usuarios&a=actualizar" autocomplete="off">
 				
@@ -37,8 +51,11 @@
 				</div>
 				
 				
-				<button id="guardar" name="guardar" type="submit" class="#">Guardar</button>
-				
+				<div class="seccion-botones">
+					<button id="guardar" name="guardar" type="submit" class="boton-guardar">Guardar</button>
+					<button type="reset" class="boton-limpiar"> Limpiar </button>
+					<button type="button" class="boton-cancelar"> Cancelar </button>
+				</div>
 			</form>
 		</body>
 	</html>		

@@ -1,9 +1,35 @@
+nav{
+  height: 100px;
+  width: 100%;
+  background-color: #092147;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+nav a{
+  text-decoration: none;
+  color: white;
+  padding-right: 15px;
+}
+
+.centrar-contenido-navbar{
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.centrar-titulo {
+  text-align: center;
+}
+
 /*Caracteristicas del div-fomurlario*/
 .contenedor-formulario{
     display: flex;
     align-content: center;
     width: 100%;
-    height: 500px;
+    height: auto;
 }
 
 /* ---------------------- Estilos formulario  ---------------------------*/
@@ -14,7 +40,8 @@ form {
     padding-left: 60px;
     border: 1px solid #CCC;
     border-radius: 1em;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items:  center;
     background-color: #e2e2e2;
 }
   
@@ -33,14 +60,18 @@ form {
     display: flex;
     width: 100%;
     justify-content: flex-start;
+    font-family:  Helvetica, Arial, sans-serif;
+    font-size:16px;
   }
   
   input,
   textarea,select {
     /* Tamaño uniforme del campo de texto */
+    margin: 5px 0px 5px 0px;
     width: 300px;
     box-sizing: border-box;
-    
+    font-family:  Helvetica, Arial, sans-serif;
+    font-size:16px;
     /* Hacer coincidir los bordes del campo del formulario */
     border: 1px solid #092147;
     border-radius: 5px;
@@ -72,15 +103,20 @@ form {
   button {
     /* Este margen adicional representa aproximadamente el mismo espacio que el espacio
        entre las etiquetas y sus campos de texto */
-    margin-left: 0em;
     box-sizing: content-box;
-    width: 100%;
+    width: 100px;
     height: 50px;
     background-color: #f5cf27;
     color: #092147;
-    border-radius: 90px;
     border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 5px 15px 5px 15px;
+    font-family:  Helvetica, Arial, sans-serif;
+    font-size:16px;
   }
+
+
 
   .titulo-formulario{
     display: flex;
@@ -88,6 +124,30 @@ form {
     width: 100%;
     height: 50%;
     margin-bottom: auto;
+  }
+
+  .alinear-centro {
+    text-align: center;
+  }
+
+  .boton-guardar {
+    background-color: #f5cf27;
+    color: black;
+}
+
+  .boton-limpiar {
+    background-color: #092147;
+    color: white;
+  }
+
+  .boton-cancelar {
+    background-color: gray;
+    color: white;
+  }
+
+
+  .elemento-form {
+    width: 50%;
   }
 /*--------------TERMINA DISEÑO DEL FORMULARIO ------------*/
 

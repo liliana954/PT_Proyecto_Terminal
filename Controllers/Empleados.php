@@ -8,7 +8,7 @@
 		
 		public function index(){
 			$empleados = new Empleados_model();
-			$data["titulo"] = "Empleado";
+			$data["titulo"] = "Empleados";
             // Se manda a gamar al metodo get del model
 			$data["empleados"] = $empleados->get_empleados();
             // Se manda a llamar a la vista de empleados - la tabla
@@ -17,7 +17,7 @@
 
 		// Si se agrega un nuevo usuario, se hace uso de este metodo y se abre la vista
 		public function nuevo(){
-			$data["titulo"] = "Empleado";
+			$data["titulo"] = "Empleados";
 			require_once "View/empleados/empleados_crear.php";
 		}
 		
