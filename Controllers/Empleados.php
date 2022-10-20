@@ -42,6 +42,7 @@
 			$empleados->insertar($nombre, $apellido_paterno, $apellido_materno
               ,$rfc, $curp, $telefono, $correo, $fecha_ingreso, $activo, $id_rol_empleado, $id_usuario);
 			$data["titulo"] = "Empleados";
+			echo "<script>alert('Se guardo correctamente');</script>";
 			$this->index();
 		}
 		
@@ -54,6 +55,7 @@
             // Consulta el usuario con ese id
 			$data["empleados"] = $empleados->get_empleados_especifico($id_empleado);
 			$data["titulo"] = "Empleados";
+			
 			require_once "View/empleados/empleados_modificar.php";
 		}
 		
@@ -77,6 +79,7 @@
 			$empleados = new Empleados_model();
 			$empleados->modificar($id_empleado, $nombre, $apellido_paterno, $apellido_materno,$rfc, $curp, $telefono, $correo, $fecha_ingreso, $activo, $id_rol_empleado, $id_usuario);
 			$data["titulo"] = "Empleados";
+			echo "<script>alert('Se modifico correctamente');</script>";
 			$this->index();
 		}
 		
@@ -84,6 +87,7 @@
 			$empleados = new Empleados_model();
 			$empleados->eliminar($id_empleado);
 			$data["titulo"] = "Empleados";
+			echo "<script>alert('Se elimino correctamente');</script>";
 			$this->index();
 		}	
 	}

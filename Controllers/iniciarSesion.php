@@ -45,10 +45,11 @@
     // Verifica que el usuario existe -  muestra el mensaje si existe o no.
     if ($registro=$resultado->fetch(PDO::FETCH_ASSOC)) {
         echo "<script>alert('Los datos ingresados son correctos');</script>";
-        echo "<a href='../View/administracion.html'> Ir a la pagina de administracion </a>" ;
+        echo "<script>location.href='../View/administracion.html';</script>";
+        
     } else {
         echo "<script>alert('Los datos ingresados son incorrectos');</script>";
-        echo "<a href='../View/login.php'> Regresar</a>";
+        echo "<script>location.href='../View/login.php';</script>";
     }
 
     echo "</div>";
