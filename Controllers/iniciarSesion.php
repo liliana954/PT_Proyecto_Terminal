@@ -23,11 +23,11 @@
     // Validaciones para que no realicen inyeccion de codigo
     if (preg_match("/^([*])$", $user)) {
         echo "No se permiten caracteres * ";
-        echo "<a href='View/login.php'> Regresar</a>";
+        echo "<script>location.href='View/login.php'> Regresar</script>";
         } 
     else if (preg_match("/^([*])$", $password)) { // Como las password, son las mismas, se valida si contiene caracteres alguna de ellas.
         echo "No se permiten caracteres * ";
-        echo "<a href='View/login.php'> Regresar</a>";
+        echo "<script>location.href='View/login.php'> Regresar</script>";
         } 
 
     // Query para validar los datos
@@ -44,11 +44,9 @@
     echo "<div class='contenedor'>";
     // Verifica que el usuario existe -  muestra el mensaje si existe o no.
     if ($registro=$resultado->fetch(PDO::FETCH_ASSOC)) {
-        echo "<script>alert('Los datos ingresados son correctos');</script>";
         echo "<script>location.href='../View/administracion.html';</script>";
-        
     } else {
-        echo "<script>alert('Los datos ingresados son incorrectos');</script>";
+        echo "<script>alert(' El usuario o contraseña son incorrectos ');</script>";
         echo "<script>location.href='../View/login.php';</script>";
     }
 

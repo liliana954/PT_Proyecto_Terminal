@@ -37,6 +37,9 @@
 			$id_rol_empleado = $_POST['id_rol_empleado'];
 			$id_usuario = $_POST['id_usuario'];
 			
+			// AQUI VAN LAS VALIDACIONES
+
+
 			$empleados = new Empleados_model();
             // Parametros que se guardaran de los usuarios
 			$empleados->insertar($nombre, $apellido_paterno, $apellido_materno
@@ -52,6 +55,7 @@
 			$empleados = new Empleados_model();
 			
 			$data["id_empleado"] = $id_empleado;
+
             // Consulta el usuario con ese id
 			$data["empleados"] = $empleados->get_empleados_especifico($id_empleado);
 			$data["titulo"] = "Empleados";
@@ -75,6 +79,11 @@
             $activo = $_POST['activo'];
 			$id_rol_empleado = $_POST['id_rol_empleado'];
 			$id_usuario = $_POST['id_usuario'];
+
+			if(preg_match("/^([*])$", $nombre)){
+				echo "<script>alert('El nombre no puede contener caracteres especiales');</script>";
+				throw new Exception("El nombre no puede contener caracteres especiales");
+			}
 
 			$empleados = new Empleados_model();
 			$empleados->modificar($id_empleado, $nombre, $apellido_paterno, $apellido_materno,$rfc, $curp, $telefono, $correo, $fecha_ingreso, $activo, $id_rol_empleado, $id_usuario);
