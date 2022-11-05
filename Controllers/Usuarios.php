@@ -34,6 +34,7 @@
             // Parametros que se guardaran de los usuarios
 			$usuarios->insertar($nombre_usuario, $contra_usuario, $id_tipo_usuario);
 			$data["titulo"] = "Usuarios";
+			echo "<script>alert('Se guardo correctamente');</script>";
 			$this->index();
 		}
 		
@@ -46,6 +47,7 @@
             // Consulta el usuario con ese id
 			$data["usuarios"] = $usuarios->get_usuarios_especifico($id_usuario);
 			$data["titulo"] = "Usuarios";
+			
 			require_once "View/usuarios/usuarios_modificar.php";
 		}
 		
@@ -61,6 +63,7 @@
 			$usuarios = new Usuarios_model();
 			$usuarios->modificar($id_usuario, $nombre_usuario, $contra_usuario, $id_tipo_usuario);
 			$data["titulo"] = "Usuarios";
+			echo "<script>alert('Se modifico correctamente');</script>";
 			$this->index();
 		}
 		
@@ -69,6 +72,7 @@
 			$usuarios = new Usuarios_model();
 			$usuarios->eliminar($id_usuario);
 			$data["titulo"] = "Usuarios";
+			echo "<script>alert('Se elimino correctamente');</script>";
 			$this->index();
 		}	
 	}
