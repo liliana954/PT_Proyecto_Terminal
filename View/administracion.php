@@ -1,3 +1,19 @@
+<?php
+    session_start();
+    
+    // Si es falso que en el Array no se contiene la variable administrador, empleado o pruebas -> por que si la contiene al estar todo correcto
+    if ($_SESSION['usuarioAdmin'] != "UsuAdm" 
+        || $_SESSION['usuarioAdmin'] != "UsuEmp" 
+        || $_SESSION['usuarioAdmin'] != "UsuPru" ) {
+            echo "<script>alert(' Correcto ');</script>";  
+    } else {
+        echo "<script>alert(' ERROR: Estas intentando ingresar sin permisos de usuario ');</script>";
+        echo "<script>location.href='../View/login.php';</script>";
+    }
+    
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +33,7 @@
             <div class="pantalla-mitad centrar-contenido-navbar"> 
                 <a href="/empleadosView.php">Empleados</a>
                 <a href="/index2.php">Usuarios</a>
-                <a href="#" disabled> Cerrar sesion </a>
+                <a href="/Controllers/cerrarSesion.php"> Cerrar sesion </a>
             </div>
         </nav>
 

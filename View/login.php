@@ -28,10 +28,9 @@
                 <li>
                     <label for="id_tipo_usuario">Tipo de usuario</label>
                     <select name="id_tipo_usuario">
-                        <option value="empleado1">Administrador</option>
-                        <option value="empleado2" selected >Empleado </option>
-                        <option value="empleado3">Pruebas</option>
-                        <option value="empleado4">Otro</option>
+                        <option value="1">Administrador</option>
+                        <option value="2" selected >Empleado </option>
+                        <option value="3">Pruebas</option>
                     </select>
                 </li>
                 <li>
