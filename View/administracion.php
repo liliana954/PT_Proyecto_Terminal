@@ -11,7 +11,6 @@
         echo "<script>alert(' ERROR: Estas intentando ingresar sin permisos de usuario ');</script>";
         echo "<script>location.href='../View/login.php';</script>";
     }
-    
 ?>
 
 <!DOCTYPE html>
