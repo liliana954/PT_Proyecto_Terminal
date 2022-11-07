@@ -12,7 +12,7 @@
 		
 		public function get_usuarios()
 		{
-			$sql = "SELECT * FROM usuario";
+			$sql = "SELECT * FROM usuario INNER JOIN tipo_usuario WHERE usuario.id_tipo_usuario = tipo_usuario.id_tipo_usuario";
 			$resultado = $this->db->query($sql);
 			while($row = $resultado->fetch_assoc())
 			{

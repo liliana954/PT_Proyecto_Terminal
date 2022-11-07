@@ -19,7 +19,7 @@
             <div class="centrar-contenido-navbar"> 
                 <a href="/empleadosView.php">Empleados</a>
                 <a href="/index2.php">Usuarios</a>
-                <a href="#" disabled> Cerrar sesion </a>
+                <a href="../../Controllers/cerrarSesion.php" disabled> Cerrar sesion </a>
             </div>
         </nav>
 		<div class="">
