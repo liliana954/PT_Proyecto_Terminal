@@ -23,7 +23,7 @@
             <div class="pantalla-mitad centrar-contenido-navbar"> 
                 <a href="/empleadosView.php">Empleados</a>
                 <a href="/index2.php">Usuarios</a>
-                <a href="#" disabled> Cerrar sesion </a>
+                <a href="../../Controllers/cerrarSesion.php" disabled> Cerrar sesion </a>
             </div>
         </nav>
 
@@ -43,10 +43,13 @@
 				<input type="text" class="#" id="contra_usuario" name="contra_usuario" />
 			</div>
 
-			<!-- Es un select de opciones -->
-			<div class="#">
-				<label for="id_tipo_usuario">Tipo usuario</label>
-				<input type="text" class="#" id="id_tipo_usuario" name="id_tipo_usuario" />
+			<div>
+				<label for="id_tipo_usuario">Tipo de usuario</label>
+				<select name="id_tipo_usuario">
+					<option value="1">Administrador</option>
+					<option value="2" selected >Empleado </option>
+					<option value="3">Pruebas</option>
+				</select>
 			</div>
 
 			<div class="seccion-botones">

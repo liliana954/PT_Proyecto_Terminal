@@ -21,7 +21,7 @@
             <div class="pantalla-mitad centrar-contenido-navbar"> 
                 <a href="/empleadosView.php">Empleados</a>
                 <a href="/index2.php">Usuarios</a>
-                <a href="#" disabled> Cerrar sesion </a>
+                <a href="../../Controllers/cerrarSesion.php" disabled> Cerrar sesion </a>
             </div>
         </nav>
 
@@ -50,10 +50,10 @@
 				<table border="1" width="80%" class="tablita" id="myTable">
 					<thead>
 						<tr class="">
-							<th>id usuario</th>
-							<th>Nombre Usuario</th>
-							<th>Contra Usuario</th>
-							<th>id tipo usuario</th>
+							<th>id</th>
+							<th>Usuario</th>
+							<th>Contraseña</th>
+							<th>Tipo de usuario</th>
 							<th>Editar</th>
 							<th>Eliminar</th>
 						</tr>
@@ -65,7 +65,7 @@
 							echo "<td>".$dato["id_usuario"]."</td>";
 							echo "<td>".$dato["nombre_usuario"]."</td>";
 							echo "<td>".$dato["contra_usuario"]."</td>";
-							echo "<td>".$dato["id_tipo_usuario"]."</td>";
+							echo "<td>".$dato["descripcion"]."</td>";
 							echo "<td><a href='index2.php?c=usuarios&a=modificar&id=".$dato["id_usuario"]."' class='#'> <img src='/Utileria/Iconos/edit.png'> </a></td>";
 							echo "<td><a href='index2.php?c=usuarios&a=eliminar&id=".$dato["id_usuario"]."' class='#'> <img src='/Utileria/Iconos/delete.png'> </a></td>";
 							echo "</tr>";
