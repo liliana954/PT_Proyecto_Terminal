@@ -20,18 +20,46 @@
     $user = $_POST['nombre_usuario'];
     $password = $_POST['contra_usuario'];
     $tipoDeUsuario = $_POST['id_tipo_usuario'];
+
+    // validacion para el captcha
+    if (isset($_POST['g-recaptcha-response'])) {
+        $captcha_response=true;
+        $recaptcha = $_POST['g-recaptcha-response'];
+        $url = 'https://www.google.com/recaptcha/api/siteverify';
+        $data = array (
+            'secret'=> '6LeP_OUiAAAAAALqQr21_3sqG9WGaB5l_Tmww_nh',
+            'response'=> $recaptcha
+        );
+        $options = array(
+            'http' => array(
+                'header' => "Content-Type: application/x-www-form-urlencoded\r\n", 
+                'method' => 'POST',
+                'content' => http_build_query($data)
+            )
+        );
+        $content = stream_context_create($options);
+        $verify = file_get_contents($url,false,$content);
+        $captcha_success = json_decode($verify);
+        $captcha_response = $captcha_success->success;
+        if ($captcha_response) {
+            echo "<script>alert(' captcha correcto ');</script>";
+        } else {
+            echo "<script>alert(' Error en el captcha ');</script>";
+            echo "<script>location.href='../View/login.php';</script>";
+        }
+    }
     
     // Validaciones para que no realicen inyeccion de codigo
-    if (preg_match("/^([*])$", $user)) {
+        if (preg_match("/^([*])$", $user)) {
             echo "No se permiten caracteres * ";
-            echo "<script>location.href='View/login.php'> Regresar</script>";
+            echo "<script>location.href='../View/login.php';</script>";
         } else if (preg_match("/^([*])$", $password)) { // Como las password, son las mismas, se valida si contiene caracteres alguna de ellas.
             echo "No se permiten caracteres * ";
-            echo "<script>location.href='View/login.php'> Regresar</script>";
-        }  else if (preg_match("/^([1-4]{1})$/",$tipoDeUsuario)) {
+            echo "<script>location.href='../View/login.php';</script>";
+        }  else if (preg_match("/^([1,3]{1})$/",$tipoDeUsuario)) {
             // el tipo de usuario no es el indicado
-            echo "Error en el tipo de usuario";
-            echo "<script>location.href='View/login.php'> Regresar</script>";
+            echo "<script>alert(' Error tipo de usuario');</script>";
+            echo "<script>location.href='../View/login.php';</script>";
         }
 
 
@@ -47,7 +75,6 @@
     // Se ejecuta la sentencia en forma de array
     $resultado->execute(array(":nombre_usuario"=>$user, ":contra_usuario"=>$password, ":tipoDeUsuario"=>$tipoDeUsuario));
 
-    echo "<div class='contenedor'>";
     // Verifica que el usuario existe -  muestra el mensaje si existe o no.
     if ($registro=$resultado->fetch(PDO::FETCH_ASSOC)) {
 
@@ -65,7 +92,6 @@
         echo "<script>location.href='../View/login.php';</script>";
     }
 
-    echo "</div>";
     $resultado->closeCursor();
 ?>
 

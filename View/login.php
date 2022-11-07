@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles.css" type="text/css" />
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <title>Login</title>
 </head>
 <body>
@@ -35,11 +36,14 @@
                 </li>
                 <li>
                     <label for="nombre_usuario">Usuario</label>
-                    <input type="text" id="nombre_usuario" name="nombre_usuario">
+                    <input type="text" id="nombre_usuario" name="nombre_usuario" placeholder="Ingresa tu usuario" required>
                 </li>
                 <li>
                     <label for="contra_usuario">Contraseña</label>
-                    <input type="password" id="contra_usuario" name="contra_usuario">
+                    <input type="password" id="contra_usuario" name="contra_usuario" placeholder="Ingresa tu contraseña" required>
+                </li>
+                <li>
+                    <div class="g-recaptcha" data-sitekey="6LeP_OUiAAAAAEFzF7Pd3qZxXH0Q5tHTvrmI6pbh" data-callback="correctCaptcha"></div>
                 </li>
                 <li class="button">
                     <button type="submit">Ingresar</button>
