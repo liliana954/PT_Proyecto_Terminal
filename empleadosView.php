@@ -7,8 +7,8 @@
 	
 
 	if ($_SESSION['usuarioAdmin'] == "UsuAdm" 
-	|| $_SESSION['usuarioAdmin'] == "UsuEmp" 
-	|| $_SESSION['usuarioAdmin'] == "UsuPru" ) {
+	|| $_SESSION['usuarioEmp'] == "UsuEmp" 
+	|| $_SESSION['usuPruebas'] == "UsuPru" ) {
 		
 		if(isset($_GET['c'])){
 			
