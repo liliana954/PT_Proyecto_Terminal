@@ -1,17 +1,16 @@
 <?php
     session_start();
     
-    // Si es falso que en el Array no se contiene la variable administrador, empleado o pruebas -> por que si la contiene al estar todo correcto
-    if ($_SESSION['usuarioAdmin'] != "UsuAdm" 
-        || $_SESSION['usuarioAdmin'] != "UsuEmp" 
-        || $_SESSION['usuarioAdmin'] != "UsuPru" ) {
+    // Solo acepta estos usuarios
+    
+    if ($_SESSION['usuarioAdmin'] == "UsuAdm" 
+	|| $_SESSION['usuarioEmp'] == "UsuEmp" 
+	|| $_SESSION['usuPruebas'] == "UsuPru" ) {
             echo "<script>alert(' Correcto ');</script>";  
     } else {
         echo "<script>alert(' ERROR: Estas intentando ingresar sin permisos de usuario ');</script>";
         echo "<script>location.href='../View/login.php';</script>";
     }
-    
-
 ?>
 
 <!DOCTYPE html>
