@@ -6,7 +6,7 @@
     if ($_SESSION['usuarioAdmin'] == "UsuAdm" 
 	|| $_SESSION['usuarioEmp'] == "UsuEmp" 
 	|| $_SESSION['usuPruebas'] == "UsuPru" ) {
-            echo "<script>alert(' Correcto ');</script>";  
+            echo "Ingreso correctamente";
     } else {
         echo "<script>alert(' ERROR: Estas intentando ingresar sin permisos de usuario ');</script>";
         echo "<script>location.href='../View/login.php';</script>";
