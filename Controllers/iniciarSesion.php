@@ -50,13 +50,13 @@
     }
     
     // Validaciones para que no realicen inyeccion de codigo
-        if (preg_match("/^([*])$", $user)) {
+        if (preg_match("/^([*])$/", $user)) {
             echo "No se permiten caracteres * ";
             echo "<script>location.href='../View/login.php';</script>";
-        } else if (preg_match("/^([*])$", $password)) { // Como las password, son las mismas, se valida si contiene caracteres alguna de ellas.
+        } else if (preg_match("/^([*])$/", $password)) { // Como las password, son las mismas, se valida si contiene caracteres alguna de ellas.
             echo "No se permiten caracteres * ";
             echo "<script>location.href='../View/login.php';</script>";
-        }  else if (preg_match("/^([1,3]{1})$/",$tipoDeUsuario)) {
+        }  else if (preg_match("/^([0,3]{1})$/",$tipoDeUsuario)) {
             // el tipo de usuario no es el indicado
             echo "<script>alert(' Error tipo de usuario');</script>";
             echo "<script>location.href='../View/login.php';</script>";

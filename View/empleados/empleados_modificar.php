@@ -67,20 +67,53 @@
 
                 <div class="#">
 					<label for="fecha_ingreso">Fecha ingreso</label>
-					<input type="text" class="#" id="fecha_ingreso" name="fecha_ingreso" value="<?php echo $data["empleados"]["fecha_ingreso"]?>" />
+					<input type="date" class="#" id="fecha_ingreso" name="fecha_ingreso" value="<?php echo $data["empleados"]["fecha_ingreso"]?>" />
 				</div>
 
                 <!-- select de activo / inactivo  -->
-				<div class="#">
-					<label for="activo">Activo</label>
-					<input type="text" class="#" id="activo" name="activo" value="<?php echo $data["empleados"]["activo"]?>" />
+				<?php
+                    if($data["empleados"]["activo"] == 1 || $data["empleados"]["activo"]=="Activo" ) {
+						$variableMuestra = "Activo";
+                    } else if ($data["empleados"]["activo"] == 2 || $data["empleados"]["activo"]=="Inactivo" ) {
+						$variableMuestra = "Inactivo";
+                    }  
+					?>
+
+				<div>
+				<label for="activo">Selecciona el estatus</label>
+				<label for="estatus_actual">Estatus actual :  <?php echo $variableMuestra; ?> </label>
+				<select name="activo" id="activo" name="activo" class="#"
+				aria-label="select example">
+					<option value="1" selected> Activo </option>
+                    <option value="2"> Inactivo </option>
+					</select>
 				</div>
 
                 <!-- select de rol de empleado  -->
-                <div class="#">
-					<label for="id_rol_empleado">id rol empleado</label>
-					<input type="text" class="#" id="id_rol_empleado" name="id_rol_empleado" value="<?php echo $data["empleados"]["id_rol_empleado"]?>" />
-				</div>
+					<?php
+						if($data["empleados"]["id_rol_empleado"] == 1) {
+							$variableMuestra = "Desarrollador BackEnd";
+						} else if ($data["empleados"]["id_rol_empleado"] == 2) {
+							$variableMuestra = "Desarrollador FrontEnd";
+						}  else if ($data["empleados"]["id_rol_empleado"] == 3) {
+							$variableMuestra = "Desarrollador Full Stack";
+						}  else if ($data["empleados"]["id_rol_empleado"] == 4) {
+							$variableMuestra = "Ingeniero de servicios";
+						}  
+						?>
+
+					<div>
+					<label for="id_rol_empleado">Selecciona el rol</label>
+					<label for="rol_actual">Rol actual :  <?php echo $variableMuestra; ?> </label>
+					<select name="id_rol_empleado" id="id_rol_empleado" name="id_rol_empleado" class="#"
+					aria-label="select example">
+						<option value="1" selected>Desarrollador BackEnd</option>
+						<option value="2">Desarrollador FrontEnd </option>
+						<option value="3">Desarrollador Full Stack</option>
+						<option value="4">Ingeniero de servicios</option>
+					</select>
+						
+					</div>
 
                 <!-- select de id usuario  -->
                 <div class="#">
