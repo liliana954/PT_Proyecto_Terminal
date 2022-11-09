@@ -72,23 +72,34 @@
 			</div>
 
 			<!-- select de activo / inactivo  -->
-			<div class="#">
-				<label for="activo">Activo</label>
-				<input type="text" class="#" id="activo" name="activo" />
+			<div>
+				<label for="activo">Estatus</label>
+				<select name="activo">
+					<option value="true" selected>Activo</option>
+					<option value="false">Inactivo </option>
+				</select>
 			</div>
+
 
 			<!-- select de rol de empleado  -->
-			<div class="#">
-				<label for="id_rol_empleado">id rol empleado</label>
-				<input type="text" class="#" id="id_rol_empleado" name="id_rol_empleado" />
+			<div>
+				<label for="id_rol_empleado">Rol del empleado</label>
+				<select name="id_rol_empleado">
+					<option value="1" selected>Desarrollador BackEnd</option>
+					<option value="2">Desarrollador FrontEnd </option>
+					<option value="3">Desarrollador Full Stack</option>
+					<option value="4">Ingeniero de servicios</option>
+				</select>
 			</div>
 
-			<!-- select de id usuario  -->
-			<div class="#">
-				<label for="id_usuario">id usuario</label>
-				<input type="text" class="#" id="id_usuario" name="id_usuario" />
-			</div>
+			<!-- select de id usuario  CONSULTAR LOS ID USUARIOS Y MOSTRARLOS EN EL SELECT-->
+			
 
+			<div class="#">
+				<label for="id_usuario">Ingresa un id de usuario</label>
+				<input type="text" id="id_usuario" name="id_usuario"/>
+			</div>
+			
 			<div class="seccion-botones">
 				<button id="guardar" name="guardar" type="submit" class="boton-guardar">Guardar</button>
 				<button type="reset" class="boton-limpiar"> Limpiar </button>

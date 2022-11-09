@@ -12,7 +12,12 @@
 		
 		public function get_empleados()
 		{
-			$sql = "SELECT * FROM empleado";
+			$sql = "SELECT * FROM empleado 
+			INNER JOIN rol_empleado 
+			ON empleado.id_rol_empleado = rol_empleado.id_rol_empleado
+			INNER JOIN usuario
+			ON empleado.id_usuario = usuario.id_usuario";
+
 			$resultado = $this->db->query($sql);
 			while($row = $resultado->fetch_assoc())
 			{

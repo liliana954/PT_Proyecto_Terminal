@@ -49,18 +49,18 @@
 				<table border="1" width="80%" class="tablita" id="myTable">
 					<thead>
 						<tr class="">
-							<th>id_empleado</th>
-							<th>nombre</th>
-							<th>apellido_paterno</th>
-							<th>apellido_materno</th>
-                            <th>rfc</th>
-							<th>curp</th>
-							<th>telefono</th>
-							<th>correo</th>
-                            <th>fecha_ingreso</th>
-							<th>activo</th>
-                            <th>id_rol_empleado</th>
-							<th>id_usuario</th>
+							<th>ID</th>
+							<th>Nombre</th>
+							<th>Apellido Paterno</th>
+							<th>Apellido Materno</th>
+                            <th>RFC</th>
+							<th>CURP</th>
+							<th>Telefono</th>
+							<th>Correo</th>
+                            <th>Fecha ingreso</th>
+							<th>Estatus</th>
+                            <th>Rol empleado</th>
+							<th>Usuario</th>
 							<th>Editar</th>
 							<th>Eliminar</th>
 						</tr>
@@ -79,8 +79,8 @@
                             echo "<td>".$dato["correo"]."</td>";
                             echo "<td>".$dato["fecha_ingreso"]."</td>";
                             echo "<td>".$dato["activo"]."</td>";
-                            echo "<td>".$dato["id_rol_empleado"]."</td>";
-                            echo "<td>".$dato["id_usuario"]."</td>";
+                            echo "<td>".$dato["descripcion"]."</td>";
+                            echo "<td>".$dato["nombre_usuario"]."</td>";
 							echo "<td><a href='empleadosView.php?c=empleados&a=modificar&id=".$dato["id_empleado"]."' class='#'> <img src='/Utileria/Iconos/edit.png'> </a></td>";
 							echo "<td><a href='empleadosView.php?c=empleados&a=eliminar&id=".$dato["id_empleado"]."' class='#'> <img src='/Utileria/Iconos/delete.png'> </a></td>";
 							echo "</tr>";
