@@ -32,6 +32,7 @@ nav a{
 
 footer{
     display: flex;
+    flex-wrap: wrap;
     height: 100px;
     background-color: #092147;
     color: #ffff;
@@ -41,6 +42,11 @@ footer{
 footer a {
     color: #ffff;
     text-decoration: none;
+}
+
+.pantalla-mitad-contacto {
+    width: 50%;
+    height: auto;
 }
 
 .borde-derecho-amarillo{
@@ -137,8 +143,14 @@ form {
     display: flex;
 }
 
+.pantalla-mitad-texto{
+    width: 50%;
+    height: 100%;
+}
+
 .pantalla-completa{
     width: 100%;
+    height: auto;
 }
 
 .titulo-seccion{
@@ -240,18 +252,18 @@ form {
 /* Tamaño pequeño < 576px */
 @media (max-width: 576px) {
     .seccion-primera{
-        height: 700px;
+        height: 350px;
         width: 100%;
         display: flex;
         flex-wrap: wrap;
     }
     .pantalla-uncuarto{
-        width: 50%;
-        height: 100%;
+        width: 100%;
+        height: 20%;
     }
     .pantalla-mitad{
         width: 100%;
-        height: 50%;
+        height: 20%;
     }
     nav {
         height: 200px;
@@ -263,10 +275,20 @@ form {
     }
 
     .seccion-segunda{
-        height: 400px;
+        height: 800px;
+        display: flex;
+        flex-wrap: wrap;
     }
 
+    .pantalla-mitad-texto{
+        width: 100%;
+        height: 50%;
+    }
 
+    .pantalla-mitad-contacto {
+        width: 100%;
+        height: auto;
+    }
     
 
   }
@@ -274,21 +296,27 @@ form {
 /* Tamaño mediano entre 577px y 991px */
 @media (min-width: 577px) and (max-width: 991px) {
     .seccion-primera{
-        height: 700px;
+        height: 350px;
         width: 100%;
         display: flex;
         flex-wrap: wrap;
     }
     .pantalla-uncuarto{
         width: 50%;
-        height: 100%;
+        height: 25%;
     }
     .pantalla-mitad{
-        width: 100%;
-        height: 50%;
+        width: 50%;
+        height: auto;
     }
     .seccion-segunda{
-        height: 400px;
+        height: 600px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .pantalla-mitad-texto{
+        width: 100%;
+        height: 50%;
     }
 
     nav {
@@ -301,6 +329,7 @@ form {
 @media (min-width: 992px) {
     .seccion-segunda{
         height: 400px;
+        
     }
 
     .pantalla-uncuarto{
@@ -309,7 +338,7 @@ form {
     }
     .pantalla-mitad{
         width: 50%;
-        height: 100%;
+        height: auto;
     }
     .seccion-primera{
         height: 350px;

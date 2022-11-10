@@ -16,10 +16,7 @@
         </div>
         
         <div class="pantalla-mitad centrar-contenido-navbar"> 
-            <a href="/index.html">Quienes somos</a>
-            <a href="#">Servicios</a>
-            <a href="#">Contacto</a>
-            <a href="/login.php"> Login </a>
+            <a href="/index.html">Volver a la pagina Principal</a>
         </div>
     </nav>
 
@@ -58,12 +55,12 @@
 
     <!-- Seccion del footer-->
     <footer>
-        <div class="pantalla-mitad centrar-contenido-todo">
+        <div class="pantalla-mitad-contacto centrar-contenido-todo">
                 <h2> Autor </h2>
                 <p> Liliana Abigail Salinas Zarzosa </p>
         </div>
 
-        <div class="pantalla-mitad centrar-contenido-todo">
+        <div class="pantalla-mitad-contacto centrar-contenido-todo">
             <h1> Contacto </h1>
             <a href="mailto:hege@example.com">tere@example.com</a></p>
         </div>
