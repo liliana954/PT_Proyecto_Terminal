@@ -150,6 +150,7 @@ form {
 
 .pantalla-completa{
     width: 100%;
+    height: auto;
 }
 
 .titulo-seccion{
@@ -251,7 +252,7 @@ form {
 /* Tamaño pequeño < 576px */
 @media (max-width: 576px) {
     .seccion-primera{
-        height: 700px;
+        height: 350px;
         width: 100%;
         display: flex;
         flex-wrap: wrap;
@@ -295,7 +296,7 @@ form {
 /* Tamaño mediano entre 577px y 991px */
 @media (min-width: 577px) and (max-width: 991px) {
     .seccion-primera{
-        height: 700px;
+        height: 350px;
         width: 100%;
         display: flex;
         flex-wrap: wrap;
@@ -306,7 +307,7 @@ form {
     }
     .pantalla-mitad{
         width: 50%;
-        height: 25%;
+        height: auto;
     }
     .seccion-segunda{
         height: 600px;
@@ -337,7 +338,7 @@ form {
     }
     .pantalla-mitad{
         width: 50%;
-        height: 100%;
+        height: auto;
     }
     .seccion-primera{
         height: 350px;
