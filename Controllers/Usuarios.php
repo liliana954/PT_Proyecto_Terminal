@@ -29,13 +29,28 @@
 			$nombre_usuario = $_POST['nombre_usuario'];
 			$contra_usuario = $_POST['contra_usuario'];
 			$id_tipo_usuario = $_POST['id_tipo_usuario'];
-			
-			$usuarios = new Usuarios_model();
-            // Parametros que se guardaran de los usuarios
-			$usuarios->insertar($nombre_usuario, $contra_usuario, $id_tipo_usuario);
-			$data["titulo"] = "Usuarios";
-			echo "<script>alert('Se guardo correctamente');</script>";
-			$this->index();
+
+
+			if (empty($nombre_usuario) && empty($contra_usuario)) {
+				echo "<script>alert('ERROR: Los campos no pueden estar vacios');</script>";
+				echo "<script>location.href='../empleadosView.php';</script>";
+			} else if (empty($nombre_usuario) || empty($contra_usuario)) {
+				echo "<script>alert('ERROR: Un campo esta vacio');</script>";
+				echo "<script>location.href='../empleadosView.php';</script>";
+			} else if (!preg_match("/^([a-zA-Z0-9]{4,10})$/",$nombre_usuario)) {
+				echo "<script>alert('ERROR: No es alfanumerico, ni contiene minimo 4 y maximo 10 caracteres');</script>";
+				echo "<script>location.href='../empleadosView.php';</script>";
+			} else if (!preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/",$contra_usuario)) {
+				echo "<script>alert('ERROR: No contiene minimo 8 caracteres debe tener una mayuscula, una minuscula, y un número');</script>";
+				echo "<script>location.href='../empleadosView.php';</script>";
+			} else {
+				$usuarios = new Usuarios_model();
+				// Parametros que se guardaran de los usuarios
+				$usuarios->insertar($nombre_usuario, $contra_usuario, $id_tipo_usuario);
+				$data["titulo"] = "Usuarios";
+				echo "<script>alert('Se guardo correctamente');</script>";
+				$this->index();
+			}
 		}
 		
         // Modifica los datos del id usuario especificado
@@ -60,11 +75,26 @@
 			$contra_usuario = $_POST['contra_usuario'];
 			$id_tipo_usuario = $_POST['id_tipo_usuario'];
 
-			$usuarios = new Usuarios_model();
-			$usuarios->modificar($id_usuario, $nombre_usuario, $contra_usuario, $id_tipo_usuario);
-			$data["titulo"] = "Usuarios";
-			echo "<script>alert('Se modifico correctamente');</script>";
-			$this->index();
+
+			if (empty($nombre_usuario) && empty($contra_usuario)) {
+				echo "<script>alert('ERROR: Los campos no pueden estar vacios');</script>";
+				echo "<script>location.href='../empleadosView.php';</script>";
+			} else if (empty($nombre_usuario) || empty($contra_usuario)) {
+				echo "<script>alert('ERROR: Un campo esta vacio');</script>";
+				echo "<script>location.href='../empleadosView.php';</script>";
+			} else if (!preg_match("/^([a-zA-Z0-9]{4,10})$/",$nombre_usuario)) {
+				echo "<script>alert('ERROR: No es alfanumerico, ni contiene minimo 4 y maximo 10 caracteres');</script>";
+				echo "<script>location.href='../empleadosView.php';</script>";
+			} else if (!preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/",$contra_usuario)) {
+				echo "<script>alert('ERROR: No contiene minimo 8 caracteres debe tener una mayuscula, una minuscula, y un número');</script>";
+				echo "<script>location.href='../empleadosView.php';</script>";
+			} else {
+				$usuarios = new Usuarios_model();
+				$usuarios->modificar($id_usuario, $nombre_usuario, $contra_usuario, $id_tipo_usuario);
+				$data["titulo"] = "Usuarios";
+				echo "<script>alert('Se modifico correctamente');</script>";
+				$this->index();
+			}
 		}
 		
 		public function eliminar($id_usuario){
