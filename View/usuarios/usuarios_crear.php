@@ -35,12 +35,12 @@
 		<form id="nuevo" name="nuevo" method="POST" action="index2.php?c=usuarios&a=guarda" autocomplete="off">
 			<div class="#">
 				<label for="nombre_usuario">Nombre Usuario</label>
-				<input type="text" class="#" id="nombre_usuario" name="nombre_usuario" />
+				<input type="text" class="#" id="nombre_usuario" name="nombre_usuario" pattern="^([a-zA-Z0-9]{4,10})$" title="Debe ser alfanumerico, minimo 4 y maximo 10 caracteres" required/>
 			</div>
 
 			<div class="#">
 				<label for="contra_usuario">Contrasena</label>
-				<input type="text" class="#" id="contra_usuario" name="contra_usuario" />
+				<input type="text" class="#" id="contra_usuario" name="contra_usuario" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" title="Minimo 8 caracteres debe tener una mayuscula, una minuscula, y un número" required/>
 			</div>
 
 			<div>

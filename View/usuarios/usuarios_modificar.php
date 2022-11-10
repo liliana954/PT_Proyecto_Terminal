@@ -33,16 +33,16 @@
 			
 			<form id="nuevo" name="nuevo" method="POST" action="index2.php?c=usuarios&a=actualizar" autocomplete="off">
 				
-				<input type="hidden" id="id_usuario" name="id_usuario" value="<?php echo $data["id_usuario"]; ?>" />
+				<input type="hidden" id="id_usuario" name="id_usuario" value="<?php echo $data["id_usuario"]; ?>"/>
 				
 				<div class="#">
 					<label for="nombre_usuario">Nombre usuario</label>
-					<input type="text" class="#" id="nombre_usuario" name="nombre_usuario" value="<?php echo $data["usuarios"]["nombre_usuario"]?>" />
+					<input type="text" class="#" id="nombre_usuario" name="nombre_usuario" pattern="^([a-zA-Z0-9]{4,10})$" title="Debe ser alfanumerico, minimo 4 y maximo 10 caracteres" value="<?php echo $data["usuarios"]["nombre_usuario"]?>" required/>
 				</div>
 				
 				<div class="#">
 					<label for="contra_usuario">Contrasena</label>
-					<input type="text" class="#" id="contra_usuario" name="contra_usuario" value="<?php echo $data["usuarios"]["contra_usuario"]?>" />
+					<input type="text" class="#" id="contra_usuario" name="contra_usuario" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" title="Minimo 8 caracteres debe tener una mayuscula, una minuscula, y un número" value="<?php echo $data["usuarios"]["contra_usuario"]?>" required/>
 				</div>
 			
 				<?php
